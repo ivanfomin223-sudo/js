@@ -12,18 +12,23 @@
 
 
 // Task 6.
-
+let e3 = 3;
+let f3 = 'Hello';
+document.querySelector('.out-6').textContent = e3 + f3;
 
 // Task 7.
-
+let e4 = 3;
+let f4 = 'Hello';
+document.querySelector('.out-7').textContent = e4 * f4;
 
 // Task 8.
-
-function t8() {    
-    
+let inputIn = document.querySelector('.i-8')
+let button = document.querySelector('.b-8')
+let output = document.querySelector('.out-8')
+button.onclick = function t8() {  
+    let val = inputIn.value;
+    output.innerHTML = val;  
 }
-
-document.querySelector('.b-8').onclick = t8;
 
 // Task 9.
 
@@ -51,9 +56,12 @@ function t11() {
 document.querySelector('.b-11').onclick = t11;
 
 // Task 12.
-
+let name = document.querySelector ('.i-12-1').value;
+let surname = document.querySelector ('.i-12-2').value;
 function t12() {
-    
+    let name = document.querySelector ('.i-12-1').value;
+    let surname = document.querySelector ('.i-12-2').value;
+    document.querySelector('.out-12').textContent = `Hello ${name} ${surname}`; 
 }
 
 
@@ -62,7 +70,9 @@ document.querySelector('.b-12').onclick = t12;
 // Task 13.
 
 function t13() {
-    
+    let number1 = +document.querySelector ('.i-13-1').value;
+    let number2 = +document.querySelector ('.i-13-2').value;
+    document.querySelector('.out-13').textContent = number1 + number2;
 }
 
 document.querySelector('.b-13').onclick = t13;
@@ -112,16 +122,27 @@ document.querySelector('.b-18').onclick = t18;
 // Task 19.
 
 function t19() {
-    
+    let number1 = +document.querySelector ('.i-19-1').value;
+    let number2 = +document.querySelector ('.i-19-2').value;
+    let output = document.querySelector('.out-19');
+    if (number1 < 0 && number2 < 0) {
+        output.textContent = number1 + number2;
+    }
+    else{
+        output.textContent = 'Помилка'
+    }
+
 }
 
 document.querySelector('.b-19').onclick = t19;
 
 // Task 20
 
-
-function t20() {
-    
+let count = 0 
+function t20() { 
+    count++;
+    let output = document.querySelector('.out-20');
+    output.textContent = count.toString();
 }
 
 document.querySelector('.b-20').onclick = t20;
